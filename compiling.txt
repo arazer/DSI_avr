@@ -1,0 +1,1 @@
+avr-gcc main.c -c -o main.o -Os -g -mmcu=attiny2313 && avr-gcc main.o -o main.elf -mmcu=attiny2313 && avr-objcopy -j .text -j .data -O ihex main.elf main.hex && avrdude -P /dev/tty.usbmodem241111 -c stk500 -p t2313 -U flash:w:main.hex
